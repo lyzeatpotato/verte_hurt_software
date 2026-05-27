@@ -1,0 +1,10 @@
+services:
+  verte-hurt-demo:
+    build: .
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    volumes:
+      - ./checkpoints:/app/checkpoints
+      - ./reports:/app/reports
+      - ./assets/demo_dataset:/app/assets/demo_dataset
