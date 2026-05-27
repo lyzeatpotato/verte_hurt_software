@@ -25,10 +25,14 @@
    | Branch | `main` 或 `master` |
    | Main file path | **`verte_hurt_software_demo/app.py`** |
 
-4. 点击 **Deploy**，等待 3～10 分钟构建完成  
-5. 获得形如 `https://xxx.streamlit.app` 的地址，发给他人即可访问  
+4. **Advanced settings** → **Python version** 选 **3.11**（或与仓库根目录 `.python-version` 一致）  
+5. 点击 **Deploy**，等待 3～10 分钟构建完成  
+6. 获得形如 `https://xxx.streamlit.app` 的地址，发给他人即可访问  
 
 ### 说明
+
+- 仓库已包含 `.python-version`（3.11）并使用 `opencv-python-headless`，避免云端默认 Python 3.14 导致 `import cv2` 失败  
+- 若仍报 OpenCV / cv2 错误：在 Cloud 控制台 **Manage app → Settings** 确认 Python 为 3.11，然后 **Reboot app** 或 **Clear cache and redeploy**
 
 - `requirements.txt`、`packages.txt`（中文字体）已放在 `verte_hurt_software_demo/` 目录，云端会自动安装  
 - 免费版实例休眠后首次打开可能需等待十几秒  
